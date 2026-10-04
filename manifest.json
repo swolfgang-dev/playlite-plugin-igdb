@@ -1,0 +1,30 @@
+{
+  "id": "IGDB",
+  "name": "IGDB",
+  "version": "1.0.0",
+  "api_version": 1,
+  "fields": [
+    "Name",
+    "SortingName",
+    "ReleaseDate",
+    "Genres",
+    "Developers",
+    "Publishers",
+    "Platforms",
+    "Features",
+    "Description",
+    "Links",
+    "CriticScore",
+    "CommunityScore",
+    "Tags",
+    "Categories",
+    "Series",
+    "CoverImage",
+    "HeaderImage",
+    "BackgroundImage"
+  ],
+  "enabled": true,
+  "repository": "swolfgang-dev/playlite-plugin-igdb",
+  "minimum_playlite_version": "0.2.0",
+  "description": "IGDB game metadata and artwork using Twitch client credentials."
+}
