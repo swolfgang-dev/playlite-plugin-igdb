@@ -81,6 +81,6 @@ class IGDBTests(unittest.TestCase):
                     if mode == 'images':
                         self.assertEqual(table.cellWidget(row, 1).currentText(), 'IGDB')
                     else:
-                        self.assertEqual(table.columnCount(), 3)
+                        self.assertEqual(table.columnCount(), len(dialog.table_providers) + 1)
             dialog.reject()
             dialog.cache.cleanup()

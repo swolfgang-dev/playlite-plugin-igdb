@@ -11,7 +11,7 @@ import urllib.request
 from playlite.metadata import MetadataError, link_name
 from playlite.sorting_name import sorting_name
 
-CREDENTIALS = Path.home() / '.config/playlite/igdb.json'
+CREDENTIALS = Path(os.environ.get('XDG_CONFIG_HOME', str(Path.home() / '.config'))) / 'playlite/igdb.json'
 
 
 def load_credentials():
