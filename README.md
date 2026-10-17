@@ -4,7 +4,7 @@ IGDB game metadata and artwork using Twitch client credentials.
 
 This repository contains only this plugin. Playlite itself lives in
 [swolfgang-dev/Playlite](https://github.com/swolfgang-dev/Playlite).
-Requires Playlite 0.2.0 or later, plugin API 1.
+Requires Playlite 0.2.87 or later, plugin API 1.
 
 ## Installation
 
