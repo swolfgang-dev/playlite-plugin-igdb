@@ -25,7 +25,7 @@
   ],
   "enabled": true,
   "repository": "swolfgang-dev/playlite-plugin-igdb",
-  "minimum_playlite_version": "0.2.44",
+  "minimum_playlite_version": "0.2.87",
   "description": "IGDB game metadata and artwork using Twitch client credentials.",
   "settings_files": [
     "playlite/igdb.json"

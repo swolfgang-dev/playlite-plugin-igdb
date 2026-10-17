@@ -26,13 +26,9 @@ def load_credentials():
 
 
 def save_credentials(client_id, client_secret):
+    from playlite.storage import atomic_json
     CREDENTIALS.parent.mkdir(parents=True, exist_ok=True)
-    temporary = CREDENTIALS.with_suffix('.tmp')
-    descriptor = os.open(temporary, os.O_WRONLY | os.O_CREAT | os.O_TRUNC, 0o600)
-    os.chmod(temporary, 0o600)
-    with os.fdopen(descriptor, 'w') as stream:
-        json.dump({'client_id': client_id.strip(), 'client_secret': client_secret.strip()}, stream)
-    temporary.replace(CREDENTIALS)
+    atomic_json(CREDENTIALS, {'client_id': client_id.strip(), 'client_secret': client_secret.strip()}, mode=0o600)
 
 
 def post(url, body, headers=None):
