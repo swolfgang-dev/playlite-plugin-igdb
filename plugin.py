@@ -26,10 +26,14 @@ class Provider(MetadataProvider):
         form.addRow(help_text)
         return widget
 
-    def save_settings(self, widget):
+    def validate_settings(self, widget):
         credentials = (widget.client_id.text().strip(), widget.secret.text().strip())
         if bool(credentials[0]) != bool(credentials[1]):
             raise ValueError('Enter both IGDB credentials, or clear both.')
+        return credentials
+
+    def save_settings(self, widget):
+        credentials = self.validate_settings(widget)
         if credentials != widget.original_credentials:
             save_credentials(*credentials)
             widget.original_credentials = credentials
